@@ -10,14 +10,14 @@
     "mongoose-unique-validator": "^4.0.0",
     "nodemon": "^2.0.22"
   },
-  "name": "chapter13",
+  "name": "blogproject",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
   },
-  "author": "Jada Mathele",
+  "author": "Lihle",
   "license": "ISC",
   "description": "",
   "devDependencies": {

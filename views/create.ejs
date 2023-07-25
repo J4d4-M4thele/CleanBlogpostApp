@@ -35,12 +35,13 @@
                             <div class="control-group">
                                 <div class="form-group floating-label-form-group controls">
                                     <label>Description</label>
-                                    <textarea rows="5" class="form-control" id="body" name="body"></textarea>
+                                    <textarea id="body" name="body" class="form-control"></textarea>
+                                    <div id="summernote"></div>
                                     <script>
-                                        $('#body').summernote({
-                                            placeholder: 'Hello bootstrap 4',
+                                        $('#summernote').summernote({
+                                            placeholder: 'Hello Bootstrap 5',
                                             tabsize: 2,
-                                            height: 200
+                                            height: 100
                                         });
                                     </script>
                                 </div>
@@ -69,8 +70,7 @@
                     <!-- * *                               SB Forms JS                               * *-->
                     <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
                     <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-                    <!-- <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script> -->
-                    
+                    <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 
 </html>

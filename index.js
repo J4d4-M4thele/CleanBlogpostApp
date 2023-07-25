@@ -3,6 +3,7 @@ const expressSession = require('express-session');
 const flash = require('connect-flash');
 const mongoose = require('mongoose')//page 53 - Connecting to MongoDB from Node
 
+//connect to Atlas cloud MongoDB
 mongoose.connect('mongodb+srv://JadaMathele:kPfIAdYSqOfix3ap@cluster0.rm0hggx.mongodb.net/my_database', { useNewUrlParser: true });
 
 const app = new express()
@@ -11,18 +12,19 @@ app.set('view engine', 'ejs')//tell Express to use EJS
 
 const fileUpload = require('express-fileupload')
 const validateMiddleware = require('./middleware/validateMiddleware');
+//const customMiddleware = require('./middleware/customMiddleware')
 const authMiddleware = require('./middleware/authMiddleware');
 const redirectIfAuthenticatedMiddleware = require('./middleware/redirectIfAuthenticatedMiddleware')
 
-const newPostController = require('./controllers/newPost')
-const homeController = require('./controllers/home')
-const storePostController = require('./controllers/storePost')
-const getPostController = require('./controllers/getPost')
-const newUserController = require('./controllers/newUser')
-const storeUserController = require('./controllers/storeUser')
-const loginController = require('./controllers/login')
-const loginUserController = require('./controllers/loginUser')
-const logoutController = require('./controllers/logout')
+const newPostController = require('./controllers/newPostController')
+const homeController = require('./controllers/homeController')
+const storePostController = require('./controllers/storePostController')
+const getPostController = require('./controllers/getPostController')
+const newUserController = require('./controllers/newUserController')
+const storeUserController = require('./controllers/storeUserController')
+const loginController = require('./controllers/loginController')
+const loginUserController = require('./controllers/loginUserController')
+const logoutController = require('./controllers/logoutController')
 
 app.use(express.static('public'))
 
